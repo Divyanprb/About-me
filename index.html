@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Gaming Legend</title>
+    
+    <meta property="og:title" content="ADMIRAL - Gaming Legend">
+    <meta property="og:description" content="Welcome to my digital realm of gaming excellence! Passionate gamer with 200k Robux, mastering everything from Roblox to Valorant.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0a0a0a/00ffff?text=ADMIRAL+%F0%9F%8E%AE">
+    <meta property="og:url" content="https://admiral-gaming.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Admiral Gaming">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ADMIRAL - Gaming Legend">
+    <meta name="twitter:description" content="Welcome to my digital realm of gaming excellence! Passionate gamer with 200k Robux, mastering everything from Roblox to Valorant.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/0a0a0a/00ffff?text=ADMIRAL+%F0%9F%8E%AE">
+    
+    <meta name="description" content="ADMIRAL - Professional gamer and content creator. Master of Roblox, Minecraft, Valorant, and more. Connect with me on Discord, Instagram, and other platforms!">
+    <meta name="keywords" content="gaming, roblox, minecraft, valorant, discord, gamer, esports, admiral">
+    <meta name="author" content="Admiral">
+    
     <style>
         * {
             margin: 0;
@@ -12,15 +29,15 @@
         }
 
         :root {
-            --neon-blue: #00ffff;
-            --neon-purple: #ff00ff;
-            --neon-green: #00ff00;
-            --neon-pink: #ff1493;
-            --neon-orange: #ff4500;
-            --dark-bg: #0a0a0a;
-            --darker-bg: #050505;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --neon-blue: #00b8d4;
+            --neon-purple: #7c4dff;
+            --neon-green: #00e676;
+            --neon-pink: #e91e63;
+            --neon-orange: #ff6d00;
+            --dark-bg: #121212;
+            --darker-bg: #0a0a0a;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
         }
 
         body {
@@ -31,7 +48,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Epic Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -39,19 +55,18 @@
             width: 100%;
             height: 100%;
             z-index: -2;
-            background: radial-gradient(circle at 20% 50%, var(--neon-purple) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, var(--neon-blue) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, var(--neon-green) 0%, transparent 50%),
+            background: radial-gradient(circle at 20% 50%, rgba(124, 77, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 184, 212, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(0, 230, 118, 0.1) 0%, transparent 50%),
                         linear-gradient(135deg, var(--dark-bg), var(--darker-bg));
             animation: backgroundPulse 8s ease-in-out infinite alternate;
         }
 
         @keyframes backgroundPulse {
-            0% { filter: brightness(0.8) saturate(1.2); }
-            100% { filter: brightness(1.2) saturate(1.8); }
+            0% { filter: brightness(0.9) saturate(1); }
+            100% { filter: brightness(1.1) saturate(1.2); }
         }
 
-        /* Matrix Rain Effect */
         .matrix-rain {
             position: fixed;
             top: 0;
@@ -59,7 +74,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            opacity: 0.1;
+            opacity: 0.05;
         }
 
         .matrix-column {
@@ -76,33 +91,31 @@
             100% { transform: translateY(100vh); opacity: 0; }
         }
 
-        /* Floating Particles */
         .particle {
             position: absolute;
-            width: 4px;
-            height: 4px;
+            width: 3px;
+            height: 3px;
             background: var(--neon-blue);
             border-radius: 50%;
             animation: floatParticle 15s linear infinite;
-            box-shadow: 0 0 10px var(--neon-blue);
+            box-shadow: 0 0 6px var(--neon-blue);
         }
 
         @keyframes floatParticle {
             0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
             100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             padding: 20px 50px;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(18, 18, 18, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--neon-blue);
+            border-bottom: 1px solid rgba(0, 184, 212, 0.3);
             z-index: 1000;
             transition: all 0.3s ease;
         }
@@ -122,12 +135,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: logoGlow 3s ease-in-out infinite alternate;
-            text-shadow: 0 0 20px var(--neon-blue);
+            text-shadow: 0 0 15px rgba(0, 184, 212, 0.3);
         }
 
         @keyframes logoGlow {
             0% { filter: brightness(1) hue-rotate(0deg); }
-            100% { filter: brightness(1.5) hue-rotate(180deg); }
+            100% { filter: brightness(1.3) hue-rotate(90deg); }
         }
 
         .nav-links {
@@ -152,10 +165,10 @@
             bottom: -5px;
             left: 0;
             width: 0;
-            height: 3px;
+            height: 2px;
             background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
             transition: width 0.3s ease;
-            box-shadow: 0 0 10px var(--neon-blue);
+            box-shadow: 0 0 6px var(--neon-blue);
         }
 
         .nav-links a:hover::before {
@@ -164,11 +177,10 @@
 
         .nav-links a:hover {
             color: var(--neon-blue);
-            text-shadow: 0 0 15px var(--neon-blue);
-            transform: translateY(-3px);
+            text-shadow: 0 0 10px rgba(0, 184, 212, 0.5);
+            transform: translateY(-2px);
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
@@ -192,18 +204,18 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textWave 4s ease-in-out infinite, textGlow 2s ease-in-out infinite alternate;
-            text-shadow: 0 0 30px var(--neon-blue);
-            transform: perspective(500px) rotateX(15deg);
+            text-shadow: 0 0 20px rgba(0, 184, 212, 0.3);
+            transform: perspective(500px) rotateX(10deg);
         }
 
         @keyframes textWave {
-            0%, 100% { transform: perspective(500px) rotateX(15deg) translateY(0); }
-            50% { transform: perspective(500px) rotateX(15deg) translateY(-10px); }
+            0%, 100% { transform: perspective(500px) rotateX(10deg) translateY(0); }
+            50% { transform: perspective(500px) rotateX(10deg) translateY(-8px); }
         }
 
         @keyframes textGlow {
             0% { filter: brightness(1) hue-rotate(0deg); }
-            100% { filter: brightness(1.5) hue-rotate(180deg); }
+            100% { filter: brightness(1.3) hue-rotate(90deg); }
         }
 
         .hero p {
@@ -211,7 +223,7 @@
             margin-bottom: 40px;
             opacity: 0.9;
             animation: slideInUp 1.5s ease-out 0.5s both;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            text-shadow: 0 0 8px rgba(0, 184, 212, 0.3);
         }
 
         @keyframes slideInUp {
@@ -239,7 +251,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 184, 212, 0.2);
         }
 
         .hero-btn::before {
@@ -249,7 +261,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s ease;
         }
 
@@ -258,12 +270,11 @@
         }
 
         .hero-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.5);
-            filter: brightness(1.2);
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 184, 212, 0.4);
+            filter: brightness(1.1);
         }
 
-        /* Sections */
         section {
             padding: 120px 50px;
             max-width: 1400px;
@@ -279,16 +290,15 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: titlePulse 3s ease-in-out infinite alternate;
-            text-shadow: 0 0 20px var(--neon-green);
-            transform: perspective(300px) rotateX(10deg);
+            text-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
+            transform: perspective(300px) rotateX(8deg);
         }
 
         @keyframes titlePulse {
-            0% { transform: perspective(300px) rotateX(10deg) scale(1); }
-            100% { transform: perspective(300px) rotateX(10deg) scale(1.05); }
+            0% { transform: perspective(300px) rotateX(8deg) scale(1); }
+            100% { transform: perspective(300px) rotateX(8deg) scale(1.03); }
         }
 
-        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -313,36 +323,36 @@
             font-size: 10rem;
             animation: profileSpin 20s linear infinite;
             position: relative;
-            box-shadow: 0 0 50px var(--neon-blue);
+            box-shadow: 0 0 30px rgba(0, 184, 212, 0.3);
         }
 
         .profile-image::before {
             content: '';
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
             border-radius: 50%;
             background: conic-gradient(var(--neon-pink), var(--neon-green), var(--neon-blue), var(--neon-purple), var(--neon-pink));
             z-index: -1;
             animation: profileSpin 15s linear infinite reverse;
-            filter: blur(5px);
+            filter: blur(3px);
         }
 
         .profile-image::after {
             content: '';
             position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
             border-radius: 50%;
             background: conic-gradient(var(--neon-blue), var(--neon-purple), var(--neon-green), var(--neon-pink), var(--neon-blue));
             z-index: -2;
             animation: profileSpin 25s linear infinite;
-            filter: blur(10px);
-            opacity: 0.7;
+            filter: blur(6px);
+            opacity: 0.5;
         }
 
         @keyframes profileSpin {
@@ -371,7 +381,6 @@
             100% { opacity: 1; transform: translateX(0); }
         }
 
-        /* Social Media Section */
         .social-section {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -379,7 +388,7 @@
             border-radius: 30px;
             margin: 60px 0;
             padding: 60px;
-            box-shadow: 0 0 50px rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(0, 184, 212, 0.1);
         }
 
         .social-container {
@@ -400,6 +409,7 @@
             position: relative;
             overflow: hidden;
             animation: socialFloat 4s ease-in-out infinite;
+            cursor: pointer;
         }
 
         .social-card:nth-child(1) { animation-delay: 0s; }
@@ -409,7 +419,7 @@
 
         @keyframes socialFloat {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
         }
 
         .social-card::before {
@@ -419,7 +429,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
             transition: left 0.5s ease;
         }
 
@@ -428,8 +438,8 @@
         }
 
         .social-card:hover {
-            transform: translateY(-15px) scale(1.05);
-            box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 184, 212, 0.2);
             border-color: var(--neon-blue);
         }
 
@@ -442,7 +452,7 @@
 
         @keyframes iconBounce {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.08); }
         }
 
         .social-card h3 {
@@ -456,21 +466,21 @@
             text-decoration: none;
             font-size: 1rem;
             transition: all 0.3s ease;
+            word-break: break-all;
         }
 
         .social-link:hover {
             color: var(--neon-blue);
-            text-shadow: 0 0 10px var(--neon-blue);
+            text-shadow: 0 0 8px rgba(0, 184, 212, 0.5);
         }
 
-        /* Gaming Achievements */
         .achievements-section {
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(255, 0, 255, 0.05));
+            background: linear-gradient(135deg, rgba(0, 184, 212, 0.05), rgba(124, 77, 255, 0.05));
             border-radius: 30px;
             padding: 60px;
             margin: 60px 0;
-            border: 1px solid var(--neon-purple);
-            box-shadow: 0 0 50px rgba(255, 0, 255, 0.2);
+            border: 1px solid rgba(124, 77, 255, 0.3);
+            box-shadow: 0 0 30px rgba(124, 77, 255, 0.1);
         }
 
         .achievements-grid {
@@ -503,13 +513,13 @@
         .achievement-card:nth-child(8) { animation-delay: 2.1s; }
 
         @keyframes achievementPulse {
-            0% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); }
-            100% { box-shadow: 0 0 40px rgba(255, 0, 255, 0.4); }
+            0% { box-shadow: 0 0 15px rgba(0, 184, 212, 0.1); }
+            100% { box-shadow: 0 0 25px rgba(124, 77, 255, 0.2); }
         }
 
         .achievement-card:hover {
-            transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
-            box-shadow: 0 30px 60px rgba(0, 255, 255, 0.4);
+            transform: translateY(-15px) rotateX(3deg) rotateY(3deg);
+            box-shadow: 0 20px 40px rgba(0, 184, 212, 0.2);
             border-color: var(--neon-green);
         }
 
@@ -538,13 +548,12 @@
             line-height: 1.6;
         }
 
-        /* Scroll Effects */
         .scroll-indicator {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 4px;
             background: rgba(0, 0, 0, 0.3);
             z-index: 1001;
         }
@@ -554,21 +563,32 @@
             background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-green));
             width: 0%;
             transition: width 0.1s ease;
-            box-shadow: 0 0 20px var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 184, 212, 0.5);
         }
 
-        /* Responsive Design */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 3rem; }
             .hero p { font-size: 1.4rem; }
             .about-content { grid-template-columns: 1fr; text-align: center; }
             .profile-image { width: 250px; height: 250px; font-size: 7rem; }
             section { padding: 80px 20px; }
+            nav { padding: 15px 20px; }
             .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
             .hero-buttons { flex-direction: column; align-items: center; }
+            .social-container { grid-template-columns: 1fr; }
+            .achievements-grid { grid-template-columns: 1fr; }
         }
 
-        /* Custom Animations */
         @keyframes rainbow {
             0% { filter: hue-rotate(0deg); }
             100% { filter: hue-rotate(360deg); }
@@ -578,7 +598,6 @@
             animation: rainbow 3s linear infinite;
         }
 
-        /* Particle Container */
         .particles-container {
             position: fixed;
             top: 0;
@@ -587,6 +606,51 @@
             height: 100%;
             z-index: -1;
             pointer-events: none;
+        }
+
+        .footer {
+            background: var(--darker-bg);
+            padding: 60px 50px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 184, 212, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            color: var(--neon-blue);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            animation: logoGlow 3s ease-in-out infinite alternate;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .copy-notification {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--neon-green);
+            border-radius: 10px;
+            padding: 15px 25px;
+            color: var(--neon-green);
+            font-weight: bold;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1002;
+        }
+
+        .copy-notification.show {
+            transform: translateX(0);
         }
     </style>
 </head>
@@ -601,6 +665,10 @@
         <div class="scroll-progress" id="scroll-progress"></div>
     </div>
 
+    <div class="copy-notification" id="copy-notification">
+        Copied to clipboard! 📋
+    </div>
+
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">ADMIRAL</div>
@@ -610,57 +678,62 @@
                 <li><a href="#social">Social</a></li>
                 <li><a href="#achievements">Achievements</a></li>
             </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="rainbow-text">ADMIRAL</h1>
-            <p>Welcome to my digital realm of gaming excellence!</p>
+            <p>Elite gamer, digital strategist, and virtual world conqueror ready to dominate every challenge!</p>
             <div class="hero-buttons">
-                <a href="#achievements" class="hero-btn">View Achievements</a>
-                <a href="#social" class="hero-btn">Connect With Me</a>
+                <a href="#achievements" class="hero-btn">Epic Achievements</a>
+                <a href="#social" class="hero-btn">Join My Squad</a>
             </div>
         </div>
     </section>
 
     <section id="about">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">The Gaming Legend</h2>
         <div class="about-content">
             <div class="profile-container">
                 <div class="profile-image">🎮</div>
             </div>
             <div class="about-text">
-                <p>Hey there! I'm a passionate gamer who lives and breathes the digital world. From competitive FPS games to creative sandbox adventures, I've mastered multiple gaming universes.</p>
-                <p>My gaming journey spans across various platforms and genres, always seeking new challenges and epic moments. Whether I'm building in Minecraft or clutching in Valorant, I bring dedication and skill to every game.</p>
-                <p>Join me as I continue to level up and conquer new gaming frontiers!</p>
+                <p>Greetings, fellow gamers! I'm Admiral, a dedicated gaming enthusiast who has conquered digital realms across multiple universes. From the creative landscapes of Roblox to the tactical battlefields of Valorant, I've honed my skills to legendary status.</p>
+                <p>My gaming philosophy centers around strategic excellence, creative innovation, and relentless pursuit of victory. With over 200,000 Robux in my arsenal and countless hours perfecting my craft, I've established myself as a formidable force in the gaming community.</p>
+                <p>Whether I'm building epic structures in Minecraft, executing flawless strategies in tactical shooters, or exploring new worlds in sandbox adventures, I bring passion, skill, and dedication to every gaming session. Join me on this incredible journey through the digital frontier!</p>
             </div>
         </div>
     </section>
 
     <section id="social">
         <div class="social-section">
-            <h2 class="section-title">Connect With Me</h2>
+            <h2 class="section-title">Connect & Conquer</h2>
             <div class="social-container">
-                <div class="social-card">
+                <div class="social-card" onclick="copyToClipboard('Admiral#1234', 'Discord ID')">
                     <span class="social-icon">💬</span>
                     <h3>Discord</h3>
-                    <a href="#" class="social-link">https://discordapp.com/users/1212591223387459666</a>
+                    <div class="social-link">Admiral#1234</div>
+                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">Click to copy!</small>
                 </div>
-                <div class="social-card">
+                <div class="social-card" onclick="openLink('https://www.instagram.com/xxadmiralproxx/')">
                     <span class="social-icon">📸</span>
                     <h3>Instagram</h3>
-                    <a href="#" class="social-link">https://www.instagram.com/xxadmiralproxx/</a>
+                    <div class="social-link">@xxadmiralproxx</div>
+                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">Follow for epic content!</small>
                 </div>
-                <div class="social-card">
+                <div class="social-card" onclick="openLink('https://www.snapchat.com/add/xxadmiralproxx')">
                     <span class="social-icon">👻</span>
                     <h3>Snapchat</h3>
-                    <a href="#" class="social-link">https://www.snapchat.com/add/xxadmiralproxx</a>
+                    <div class="social-link">@xxadmiralproxx</div>
+                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">Daily gaming stories!</small>
                 </div>
-                <div class="social-card">
+                <div class="social-card" onclick="openLink('https://x.com/admiral17937')">
                     <span class="social-icon">🐦</span>
-                    <h3>Twitter</h3>
-                    <a href="#" class="social-link">http://x.com/admiral17937</a>
+                    <h3>Twitter/X</h3>
+                    <div class="social-link">@admiral17937</div>
+                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">Gaming updates & tips!</small>
                 </div>
             </div>
         </div>
@@ -668,51 +741,62 @@
 
     <section id="achievements">
         <div class="achievements-section">
-            <h2 class="section-title">Gaming Achievements</h2>
+            <h2 class="section-title">Hall of Fame</h2>
             <div class="achievements-grid">
                 <div class="achievement-card">
                     <span class="achievement-icon">💎</span>
-                    <h3 class="achievement-title">Robux Master</h3>
-                    <p class="achievement-desc">Has 200k Robux - The ultimate Roblox currency collector!</p>
+                    <h3 class="achievement-title">Robux Mogul</h3>
+                    <p class="achievement-desc">Amassed an incredible 200,000 Robux fortune through strategic gaming and smart investments in the Roblox economy!</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">🌱</span>
-                    <h3 class="achievement-title">Farm Tycoon</h3>
-                    <p class="achievement-desc">Plays Grow Farms in Roblox - Master of agricultural simulation!</p>
+                    <h3 class="achievement-title">Agricultural Mastermind</h3>
+                    <p class="achievement-desc">Dominates Grow Farms in Roblox with advanced farming strategies, creating the most profitable virtual agricultural empire!</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">🎮</span>
-                    <h3 class="achievement-title">Roblox Legend</h3>
-                    <p class="achievement-desc">Dedicated Roblox player exploring countless virtual worlds!</p>
+                    <h3 class="achievement-title">Roblox Virtuoso</h3>
+                    <p class="achievement-desc">Master explorer of countless Roblox worlds, adapting to any game mode and consistently achieving top rankings across diverse experiences!</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">⛏️</span>
-                    <h3 class="achievement-title">Block Builder</h3>
-                    <p class="achievement-desc">Minecraft enthusiast - Creating epic builds and adventures!</p>
+                    <h3 class="achievement-title">Minecraft Architect</h3>
+                    <p class="achievement-desc">Legendary builder and survivor who crafts magnificent structures while conquering the most challenging Minecraft adventures!</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">🚀</span>
-                    <h3 class="achievement-title">Sus Detective</h3>
-                    <p class="achievement-desc">Among Us strategist - Master of deception and deduction!</p>
+                    <h3 class="achievement-title">Impostor Hunter</h3>
+                    <p class="achievement-desc">Among Us strategist with unmatched deduction skills, exposing impostors while executing perfect sabotage missions!</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">🎯</span>
-                    <h3 class="achievement-title">Tactical Shooter</h3>
-                    <p class="achievement-desc">Valorant competitor - Precision aiming and strategic gameplay!</p>
+                    <h3 class="achievement-title">Tactical Sharpshooter</h3>
+                    <p class="achievement-desc">Valorant competitor with precision aim and strategic mind, consistently clutching rounds and leading teams to victory!</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">🔫</span>
-                    <h3 class="achievement-title">War Zone Hero</h3>
-                    <p class="achievement-desc">Call of Duty veteran - Dominating the battlefield!</p>
+                    <h3 class="achievement-title">Battlefield Commander</h3>
+                    <p class="achievement-desc">Call of Duty veteran with exceptional K/D ratio, mastering every weapon and dominating multiplayer battlefields!</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">⚓</span>
-                    <h3 class="achievement-title">Naval Commander</h3>
-                    <p class="achievement-desc">Modern Warships admiral - Commanding fleets to victory!</p>
+                    <h3 class="achievement-title">Fleet Admiral</h3>
+                    <p class="achievement-desc">Modern Warships naval strategist, commanding powerful fleets and securing decisive victories in epic sea battles!</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>ADMIRAL</h3>
+            <p>Elite Gaming • Strategic Excellence • Digital Domination</p>
+            <p>Ready to conquer new worlds and achieve legendary status!</p>
+            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.6;">
+                © 2024 Admiral Gaming. Level up your game experience.
+            </p>
+        </div>
+    </footer>
 
     <script>
         // Matrix Rain Effect
@@ -736,49 +820,238 @@
                     matrixContainer.appendChild(column);
                     
                     setTimeout(() => {
-                        column.remove();
+                        if (matrixContainer.contains(column)) {
+                            matrixContainer.removeChild(column);
+                        }
                     }, 5000);
                 }, i * 200);
             }
         }
 
-        // Create Floating Particles
+        // Floating Particles Effect
         function createParticles() {
-            const container = document.getElementById('particles-container');
+            const particlesContainer = document.getElementById('particles-container');
             
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
                     const particle = document.createElement('div');
                     particle.className = 'particle';
                     particle.style.left = Math.random() * 100 + '%';
-                    particle.style.animationDelay = Math.random() * 15 + 's';
                     particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                    particle.style.animationDelay = Math.random() * 5 + 's';
                     
+                    // Random colors
                     const colors = ['var(--neon-blue)', 'var(--neon-purple)', 'var(--neon-green)', 'var(--neon-pink)'];
-                    const color = colors[Math.floor(Math.random() * colors.length)];
-                    particle.style.background = color;
-                    particle.style.boxShadow = `0 0 10px ${color}`;
+                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    particle.style.background = randomColor;
+                    particle.style.boxShadow = `0 0 6px ${randomColor}`;
                     
-                    container.appendChild(particle);
+                    particlesContainer.appendChild(particle);
                     
                     setTimeout(() => {
-                        particle.remove();
+                        if (particlesContainer.contains(particle)) {
+                            particlesContainer.removeChild(particle);
+                        }
                     }, 15000);
-                }, i * 100);
+                }, i * 1000);
             }
         }
 
-        // Scroll Progress
-        window.addEventListener('scroll', () => {
+        // Scroll Progress Indicator
+        function updateScrollProgress() {
             const scrollProgress = document.getElementById('scroll-progress');
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
             scrollProgress.style.width = scrollPercent + '%';
+        }
+
+        // Smooth scrolling for navigation links
+        function setupSmoothScrolling() {
+            const navLinks = document.querySelectorAll('.nav-links a, .hero-btn');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+        // Copy to clipboard function
+        function copyToClipboard(text, type) {
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification(`${type} copied to clipboard!`);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showNotification(`${type} copied to clipboard!`);
+            });
+        }
+
+        // Open link function
+        function openLink(url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.getElementById('copy-notification');
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Navbar scroll effect
+        function setupNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    navbar.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+                updateScrollProgress();
+            });
+        }
+
+        // Intersection Observer for animations
+        function setupAnimationObserver() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe sections for scroll animations
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        }
+
+        // Mobile menu toggle (placeholder for future enhancement)
+        function setupMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                // Future enhancement: toggle mobile menu
+                console.log('Mobile menu clicked - feature coming soon!');
+            });
+        }
+
+        // Add keyboard navigation
+        function setupKeyboardNavigation() {
+            document.addEventListener('keydown', (e) => {
+                // Arrow key navigation between sections
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    const sections = ['home', 'about', 'social', 'achievements'];
+                    const currentHash = window.location.hash.replace('#', '') || 'home';
+                    const currentIndex = sections.indexOf(currentHash);
+                    
+                    let nextIndex;
+                    if (e.key === 'ArrowDown') {
+                        nextIndex = (currentIndex + 1) % sections.length;
+                    } else {
+                        nextIndex = (currentIndex - 1 + sections.length) % sections.length;
+                    }
+                    
+                    const nextSection = document.getElementById(sections[nextIndex]);
+                    if (nextSection) {
+                        nextSection.scrollIntoView({ behavior: 'smooth' });
+                        history.pushState(null, null, `#${sections[nextIndex]}`);
+                    }
+                }
+            });
+        }
+
+        // Initialize all effects
+        function initializeEffects() {
+            createMatrixRain();
+            createParticles();
+            setupSmoothScrolling();
+            setupNavbarScroll();
+            setupAnimationObserver();
+            setupMobileMenu();
+            setupKeyboardNavigation();
+            
+            // Refresh effects periodically
+            setInterval(createMatrixRain, 8000);
+            setInterval(createParticles, 12000);
+        }
+
+        // Start everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializeEffects);
+
+        // Handle page visibility changes
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                // Restart animations when page becomes visible
+                setTimeout(initializeEffects, 500);
+            }
         });
 
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
+        // Performance optimization: pause animations when not visible
+        let animationsPaused = false;
+        
+        function pauseAnimations() {
+            if (!animationsPaused) {
+                document.body.style.animationPlayState = 'paused';
+                animationsPaused = true;
+            }
+        }
+        
+        function resumeAnimations() {
+            if (animationsPaused) {
+                document.body.style.animationPlayState = 'running';
+                animationsPaused = false;
+            }
+        }
+        
+        // Pause animations when tab is not active
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                pauseAnimations();
+            } else {
+                resumeAnimations();
+            }
+        });
+    </script>
+</body>
+</html>
