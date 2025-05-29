@@ -3,25 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Gaming Legend</title>
+    <title>Admiral | Elite Gamer and a Roblox Developer</title>
     
-    <meta property="og:title" content="ADMIRAL - Gaming Legend">
-    <meta property="og:description" content="Welcome to my digital realm of gaming excellence! Passionate gamer with 200k Robux, mastering everything from Roblox to Valorant.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/0a0a0a/00ffff?text=ADMIRAL+%F0%9F%8E%AE">
-    <meta property="og:url" content="https://admiral-gaming.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Admiral Gaming">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ADMIRAL - Gaming Legend">
-    <meta name="twitter:description" content="Welcome to my digital realm of gaming excellence! Passionate gamer with 200k Robux, mastering everything from Roblox to Valorant.">
-    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/0a0a0a/00ffff?text=ADMIRAL+%F0%9F%8E%AE">
-    
-    <meta name="description" content="ADMIRAL - Professional gamer and content creator. Master of Roblox, Minecraft, Valorant, and more. Connect with me on Discord, Instagram, and other platforms!">
-    <meta name="keywords" content="gaming, roblox, minecraft, valorant, discord, gamer, esports, admiral">
-    <meta name="author" content="Admiral">
+    <meta property="og:title" content="ADMIRAL - Elite Gamer and a Roblox Developer 🎮💰">
+    <meta property="og:description" content="Roblox developer with 200k+ Robux. Expert in Luau, Python, JavaScript, C++, and modern web technologies. Building the future of gaming.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0f0f23/00d4ff?text=Admiral+%F0%9F%8E%AE%F0%9F%92%BB">
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -29,95 +19,112 @@
         }
 
         :root {
-            --neon-blue: #00b8d4;
-            --neon-purple: #7c4dff;
-            --neon-green: #00e676;
-            --neon-pink: #e91e63;
-            --neon-orange: #ff6d00;
-            --dark-bg: #121212;
-            --darker-bg: #0a0a0a;
-            --glass-bg: rgba(255, 255, 255, 0.08);
-            --glass-border: rgba(255, 255, 255, 0.15);
+            --primary-blue: #00d4ff;
+            --secondary-purple: #6c5ce7;
+            --accent-green: #00b894;
+            --soft-pink: #fd79a8;
+            --warm-orange: #e17055;
+            --electric-cyan: #00ffff;
+            --neon-green: #39ff14;
+            --dark-bg: #0a0a0f;
+            --darker-bg: #050508;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.9);
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --shadow-primary: rgba(0, 212, 255, 0.2);
+            --shadow-secondary: rgba(108, 92, 231, 0.15);
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: var(--dark-bg);
-            color: white;
+            color: var(--text-primary);
             overflow-x: hidden;
             scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
+        /* Advanced Background Animation */
         .bg-animation {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -2;
-            background: radial-gradient(circle at 20% 50%, rgba(124, 77, 255, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(0, 184, 212, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(0, 230, 118, 0.1) 0%, transparent 50%),
-                        linear-gradient(135deg, var(--dark-bg), var(--darker-bg));
-            animation: backgroundPulse 8s ease-in-out infinite alternate;
+            z-index: -3;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(108, 92, 231, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 40% 80%, rgba(0, 184, 148, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 60% 20%, rgba(253, 121, 168, 0.05) 0%, transparent 40%),
+                linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            animation: backgroundShift 30s ease-in-out infinite alternate;
         }
 
-        @keyframes backgroundPulse {
-            0% { filter: brightness(0.9) saturate(1); }
-            100% { filter: brightness(1.1) saturate(1.2); }
+        @keyframes backgroundShift {
+            0% { transform: scale(1) rotate(0deg); filter: hue-rotate(0deg); }
+            50% { transform: scale(1.02) rotate(0.5deg); filter: hue-rotate(5deg); }
+            100% { transform: scale(1.01) rotate(-0.5deg); filter: hue-rotate(-5deg); }
         }
 
-        .matrix-rain {
+        /* Enhanced Floating Elements */
+        .floating-particles {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            opacity: 0.05;
-        }
-
-        .matrix-column {
-            position: absolute;
-            top: -100px;
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            color: var(--neon-green);
-            animation: matrixFall linear infinite;
-        }
-
-        @keyframes matrixFall {
-            0% { transform: translateY(-100px); opacity: 1; }
-            100% { transform: translateY(100vh); opacity: 0; }
+            z-index: -2;
+            overflow: hidden;
+            pointer-events: none;
         }
 
         .particle {
             position: absolute;
-            width: 3px;
-            height: 3px;
-            background: var(--neon-blue);
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             border-radius: 50%;
-            animation: floatParticle 15s linear infinite;
-            box-shadow: 0 0 6px var(--neon-blue);
+            opacity: 0.6;
+            animation: particleFloat 20s linear infinite;
+            filter: blur(1px);
         }
 
-        @keyframes floatParticle {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.6; }
-            90% { opacity: 0.6; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(100px) rotate(360deg) scale(0);
+                opacity: 0;
+            }
         }
 
+        /* Enhanced Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 50px;
-            background: rgba(18, 18, 18, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 184, 212, 0.3);
+            padding: 18px 50px;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
             z-index: 1000;
             transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 12px 50px;
+            background: rgba(5, 5, 8, 0.98);
+            box-shadow: 0 5px 30px var(--shadow-primary);
         }
 
         .nav-container {
@@ -130,17 +137,18 @@
 
         .logo {
             font-size: 2rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-green));
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--primary-blue), var(--electric-cyan), var(--secondary-purple));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: logoGlow 3s ease-in-out infinite alternate;
-            text-shadow: 0 0 15px rgba(0, 184, 212, 0.3);
+            animation: logoGlow 4s ease-in-out infinite alternate;
+            text-shadow: 0 0 20px var(--primary-blue);
         }
 
         @keyframes logoGlow {
-            0% { filter: brightness(1) hue-rotate(0deg); }
-            100% { filter: brightness(1.3) hue-rotate(90deg); }
+            0% { filter: brightness(1) drop-shadow(0 0 5px var(--primary-blue)); }
+            100% { filter: brightness(1.3) drop-shadow(0 0 15px var(--primary-blue)); }
         }
 
         .nav-links {
@@ -150,108 +158,126 @@
         }
 
         .nav-links a {
-            color: white;
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 600;
             position: relative;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 0.95rem;
         }
 
         .nav-links a::before {
             content: '';
             position: absolute;
+            top: -5px;
+            left: -10px;
+            right: -10px;
             bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
-            transition: width 0.3s ease;
-            box-shadow: 0 0 6px var(--neon-blue);
+            background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            border-radius: 8px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: -1;
         }
 
         .nav-links a:hover::before {
+            opacity: 1;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--electric-cyan));
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
             width: 100%;
         }
 
         .nav-links a:hover {
-            color: var(--neon-blue);
-            text-shadow: 0 0 10px rgba(0, 184, 212, 0.5);
-            transform: translateY(-2px);
+            color: var(--electric-cyan);
+            text-shadow: 0 0 10px var(--primary-blue);
         }
 
+        /* Hero Section Enhancement */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
-            overflow: hidden;
+            padding: 120px 20px 60px;
+            background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.03) 0%, transparent 70%);
         }
 
         .hero-content {
-            max-width: 900px;
-            padding: 0 20px;
+            max-width: 1000px;
             z-index: 10;
+            position: relative;
         }
 
         .hero h1 {
-            font-size: 5rem;
+            font-size: clamp(3.5rem, 10vw, 7rem);
             margin-bottom: 30px;
-            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-green), var(--neon-pink));
+            background: linear-gradient(45deg, var(--primary-blue), var(--electric-cyan), var(--secondary-purple), var(--neon-green));
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: textWave 4s ease-in-out infinite, textGlow 2s ease-in-out infinite alternate;
-            text-shadow: 0 0 20px rgba(0, 184, 212, 0.3);
-            transform: perspective(500px) rotateX(10deg);
+            animation: gradientShift 8s ease-in-out infinite, titleFloat 6s ease-in-out infinite alternate;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            text-shadow: 0 0 30px var(--primary-blue);
         }
 
-        @keyframes textWave {
-            0%, 100% { transform: perspective(500px) rotateX(10deg) translateY(0); }
-            50% { transform: perspective(500px) rotateX(10deg) translateY(-8px); }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
-        @keyframes textGlow {
-            0% { filter: brightness(1) hue-rotate(0deg); }
-            100% { filter: brightness(1.3) hue-rotate(90deg); }
+        @keyframes titleFloat {
+            0% { transform: translateY(0px) scale(1); }
+            100% { transform: translateY(-12px) scale(1.02); }
         }
 
-        .hero p {
-            font-size: 1.8rem;
+        .hero-subtitle {
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
             margin-bottom: 40px;
-            opacity: 0.9;
-            animation: slideInUp 1.5s ease-out 0.5s both;
-            text-shadow: 0 0 8px rgba(0, 184, 212, 0.3);
-        }
-
-        @keyframes slideInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 0.9; transform: translateY(0); }
+            color: var(--text-secondary);
+            animation: slideUp 1.2s ease-out 0.3s both;
+            font-weight: 500;
+            line-height: 1.4;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero-buttons {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             justify-content: center;
             flex-wrap: wrap;
-            animation: slideInUp 1.5s ease-out 1s both;
+            animation: slideUp 1.2s ease-out 0.6s both;
         }
 
         .hero-btn {
             padding: 15px 35px;
-            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
             color: white;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 184, 212, 0.2);
+            box-shadow: 0 8px 25px var(--shadow-primary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .hero-btn::before {
@@ -262,7 +288,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
+            transition: left 0.6s ease;
         }
 
         .hero-btn:hover::before {
@@ -270,60 +296,85 @@
         }
 
         .hero-btn:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 10px 30px rgba(0, 184, 212, 0.4);
-            filter: brightness(1.1);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px var(--shadow-primary);
+            text-shadow: 0 0 10px white;
         }
 
+        /* Enhanced Sections */
         section {
-            padding: 120px 50px;
+            padding: 100px 50px;
             max-width: 1400px;
             margin: 0 auto;
             position: relative;
         }
 
         .section-title {
-            font-size: 3.5rem;
+            font-size: clamp(2.8rem, 6vw, 4rem);
             text-align: center;
-            margin-bottom: 60px;
-            background: linear-gradient(45deg, var(--neon-green), var(--neon-pink));
+            margin-bottom: 80px;
+            background: linear-gradient(45deg, var(--accent-green), var(--soft-pink), var(--primary-blue));
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: titlePulse 3s ease-in-out infinite alternate;
-            text-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
-            transform: perspective(300px) rotateX(8deg);
+            animation: gradientShift 6s ease-in-out infinite;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            position: relative;
         }
 
-        @keyframes titlePulse {
-            0% { transform: perspective(300px) rotateX(8deg) scale(1); }
-            100% { transform: perspective(300px) rotateX(8deg) scale(1.03); }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--electric-cyan));
+            transform: translateX(-50%);
+            border-radius: 2px;
+            box-shadow: 0 0 20px var(--primary-blue);
         }
 
+        /* About Section Enhancement */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 80px;
-            align-items: center;
+            align-items: start;
         }
 
-        .profile-container {
-            position: relative;
+        .profile-section {
+            position: sticky;
+            top: 140px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .profile-image {
-            width: 350px;
-            height: 350px;
+            width: 320px;
+            height: 320px;
             border-radius: 50%;
-            background: conic-gradient(var(--neon-blue), var(--neon-purple), var(--neon-green), var(--neon-pink), var(--neon-blue));
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple), var(--accent-green), var(--soft-pink));
+            background-size: 400% 400%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 10rem;
-            animation: profileSpin 20s linear infinite;
+            font-size: 7rem;
+            margin-bottom: 30px;
             position: relative;
-            box-shadow: 0 0 30px rgba(0, 184, 212, 0.3);
+            animation: profileAnimation 8s ease-in-out infinite, gradientShift 12s ease-in-out infinite;
+            box-shadow: 0 0 50px var(--shadow-primary);
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes profileAnimation {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.05) rotate(2deg); }
+            50% { transform: scale(1.02) rotate(0deg); }
+            75% { transform: scale(1.05) rotate(-2deg); }
         }
 
         .profile-image::before {
@@ -334,724 +385,1425 @@
             right: -8px;
             bottom: -8px;
             border-radius: 50%;
-            background: conic-gradient(var(--neon-pink), var(--neon-green), var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            background: linear-gradient(45deg, var(--electric-cyan), var(--neon-green), var(--soft-pink), var(--primary-blue));
             z-index: -1;
-            animation: profileSpin 15s linear infinite reverse;
-            filter: blur(3px);
+            animation: profileRotate 20s linear infinite;
+            opacity: 0.4;
+            filter: blur(2px);
         }
 
-        .profile-image::after {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
-            border-radius: 50%;
-            background: conic-gradient(var(--neon-blue), var(--neon-purple), var(--neon-green), var(--neon-pink), var(--neon-blue));
-            z-index: -2;
-            animation: profileSpin 25s linear infinite;
-            filter: blur(6px);
-            opacity: 0.5;
-        }
-
-        @keyframes profileSpin {
+        @keyframes profileRotate {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        .about-text {
-            font-size: 1.3rem;
-            line-height: 2;
-            animation: textSlideIn 1s ease-out;
-        }
-
-        .about-text p {
-            margin-bottom: 25px;
-            opacity: 0;
-            animation: fadeInStagger 1s ease-out forwards;
-        }
-
-        .about-text p:nth-child(1) { animation-delay: 0.2s; }
-        .about-text p:nth-child(2) { animation-delay: 0.4s; }
-        .about-text p:nth-child(3) { animation-delay: 0.6s; }
-
-        @keyframes fadeInStagger {
-            0% { opacity: 0; transform: translateX(-30px); }
-            100% { opacity: 1; transform: translateX(0); }
-        }
-
-        .social-section {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            margin: 60px 0;
-            padding: 60px;
-            box-shadow: 0 0 30px rgba(0, 184, 212, 0.1);
-        }
-
-        .social-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .social-card {
-            background: var(--glass-bg);
+        .profile-stats {
+            background: var(--card-bg);
             backdrop-filter: blur(15px);
             border: 1px solid var(--glass-border);
             border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
+            padding: 25px;
+            margin-top: 25px;
+            width: 100%;
+            max-width: 320px;
+            box-shadow: 0 10px 30px var(--shadow-secondary);
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-shadow: 0 0 10px var(--primary-blue);
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+            text-align: justify;
+        }
+
+        .about-text p:nth-child(1) { animation-delay: 0.1s; }
+        .about-text p:nth-child(2) { animation-delay: 0.2s; }
+        .about-text p:nth-child(3) { animation-delay: 0.3s; }
+        .about-text p:nth-child(4) { animation-delay: 0.4s; }
+        .about-text p:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .highlight {
+            color: var(--electric-cyan);
+            font-weight: 700;
+            position: relative;
+            text-shadow: 0 0 10px var(--primary-blue);
+        }
+
+        /* Enhanced Code Showcase */
+        .code-showcase {
+            background: var(--darker-bg);
+            border: 2px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 35px 0;
+            font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .code-showcase::before {
+            content: 'Luau • Roblox';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .code-line {
+            margin: 5px 0;
+            animation: typeWriter 4s ease-out;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes typeWriter {
+            0% { width: 0; opacity: 0; }
+            20% { opacity: 1; }
+            100% { width: 100%; opacity: 1; }
+        }
+
+        .keyword { color: #ff6b9d; font-weight: 600; }
+        .string { color: #4ecdc4; }
+        .comment { color: #95a5a6; font-style: italic; }
+        .function { color: #f39c12; font-weight: 600; }
+        .number { color: #e74c3c; }
+
+        /* Enhanced Skills Section */
+        .skills-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--glass-border);
+            border-radius: 30px;
+            margin: 80px 0;
+            padding: 60px;
+            box-shadow: 0 20px 60px var(--shadow-primary);
             position: relative;
             overflow: hidden;
-            animation: socialFloat 4s ease-in-out infinite;
-            cursor: pointer;
         }
 
-        .social-card:nth-child(1) { animation-delay: 0s; }
-        .social-card:nth-child(2) { animation-delay: 0.5s; }
-        .social-card:nth-child(3) { animation-delay: 1s; }
-        .social-card:nth-child(4) { animation-delay: 1.5s; }
-
-        @keyframes socialFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+        .skills-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 212, 255, 0.02), rgba(108, 92, 231, 0.02));
+            z-index: -1;
         }
 
-        .social-card::before {
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-category::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-            transition: left 0.5s ease;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.08), transparent);
+            transition: left 0.8s ease;
         }
 
-        .social-card:hover::before {
+        .skill-category:hover::before {
             left: 100%;
         }
 
-        .social-card:hover {
-            transform: translateY(-12px) scale(1.03);
-            box-shadow: 0 15px 40px rgba(0, 184, 212, 0.2);
-            border-color: var(--neon-blue);
+        .skill-category:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--primary-blue);
+            box-shadow: 0 20px 40px var(--shadow-primary);
         }
 
-        .social-icon {
+        .skill-category h3 {
+            color: var(--accent-green);
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+            text-shadow: 0 0 10px var(--accent-green);
+        }
+
+        .skill-icon {
+            font-size: 1.8rem;
+            animation: iconFloat 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes iconFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-5px) rotate(5deg); }
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .skill-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-tag:hover::before {
+            left: 100%;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.5);
+            text-shadow: 0 0 10px white;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.03), rgba(108, 92, 231, 0.03));
+            border-radius: 30px;
+            padding: 60px;
+            margin: 80px 0;
+            border: 2px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--accent-green);
+            box-shadow: 0 20px 50px rgba(0, 184, 148, 0.2);
+        }
+
+        .project-icon {
             font-size: 3rem;
             margin-bottom: 20px;
             display: block;
-            animation: iconBounce 2s ease-in-out infinite;
+            animation: projectFloat 5s ease-in-out infinite alternate;
         }
 
-        @keyframes iconBounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
+        @keyframes projectFloat {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.1) rotate(10deg); }
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--electric-cyan);
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px var(--primary-blue);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: rgba(0, 184, 148, 0.2);
+            color: var(--accent-green);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid var(--accent-green);
+        }
+
+        /* Enhanced Social Section */
+        .social-section {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(108, 92, 231, 0.04));
+            border-radius: 30px;
+            padding: 60px;
+            margin: 80px 0;
+            border: 2px solid rgba(0, 212, 255, 0.15);
+            position: relative;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .social-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-card:hover {
+            transform: translateY(-12px) scale(1.05);
+            border-color: var(--primary-blue);
+            box-shadow: 0 25px 50px var(--shadow-primary);
+        }
+
+        .social-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+            animation: socialPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes socialPulse {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.15); filter: brightness(1.3); }
         }
 
         .social-card h3 {
-            color: var(--neon-blue);
-            margin-bottom: 15px;
             font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--electric-cyan);
         }
 
-        .social-link {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
+        .social-card p {
+            color: var(--text-secondary);
             font-size: 1rem;
-            transition: all 0.3s ease;
-            word-break: break-all;
         }
 
-        .social-link:hover {
-            color: var(--neon-blue);
-            text-shadow: 0 0 8px rgba(0, 184, 212, 0.5);
-        }
-
+        /* Enhanced Achievements */
         .achievements-section {
-            background: linear-gradient(135deg, rgba(0, 184, 212, 0.05), rgba(124, 77, 255, 0.05));
+            background: var(--card-bg);
             border-radius: 30px;
             padding: 60px;
-            margin: 60px 0;
-            border: 1px solid rgba(124, 77, 255, 0.3);
-            box-shadow: 0 0 30px rgba(124, 77, 255, 0.1);
+            margin: 80px 0;
+            border: 2px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 60px var(--shadow-secondary);
         }
 
         .achievements-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
 
         .achievement-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.02);
+            border: 2px solid var(--glass-border);
             border-radius: 20px;
-            padding: 40px;
+            padding: 35px;
             text-align: center;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            animation: achievementPulse 3s ease-in-out infinite alternate;
-        }
-
-        .achievement-card:nth-child(1) { animation-delay: 0s; }
-        .achievement-card:nth-child(2) { animation-delay: 0.3s; }
-        .achievement-card:nth-child(3) { animation-delay: 0.6s; }
-        .achievement-card:nth-child(4) { animation-delay: 0.9s; }
-        .achievement-card:nth-child(5) { animation-delay: 1.2s; }
-        .achievement-card:nth-child(6) { animation-delay: 1.5s; }
-        .achievement-card:nth-child(7) { animation-delay: 1.8s; }
-        .achievement-card:nth-child(8) { animation-delay: 2.1s; }
-
-        @keyframes achievementPulse {
-            0% { box-shadow: 0 0 15px rgba(0, 184, 212, 0.1); }
-            100% { box-shadow: 0 0 25px rgba(124, 77, 255, 0.2); }
         }
 
         .achievement-card:hover {
-            transform: translateY(-15px) rotateX(3deg) rotateY(3deg);
-            box-shadow: 0 20px 40px rgba(0, 184, 212, 0.2);
-            border-color: var(--neon-green);
+            transform: translateY(-8px) scale(1.03);
+            border-color: var(--accent-green);
+            box-shadow: 0 20px 40px rgba(0, 184, 148, 0.2);
         }
 
         .achievement-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
             display: block;
-            animation: iconSpin 8s linear infinite;
+            animation: achievementGlow 6s ease-in-out infinite alternate;
         }
 
-        @keyframes iconSpin {
-            0% { transform: rotateY(0deg); }
-            100% { transform: rotateY(360deg); }
+        @keyframes achievementGlow {
+            0% { filter: brightness(1) drop-shadow(0 0 10px currentColor); }
+            100% { filter: brightness(1.4) drop-shadow(0 0 20px currentColor); }
         }
 
-        .achievement-title {
-            color: var(--neon-green);
+        .achievement-card h3 {
             font-size: 1.4rem;
+            font-weight: 700;
             margin-bottom: 15px;
-            font-weight: bold;
+            color: var(--neon-green);
+            text-shadow: 0 0 10px var(--accent-green);
         }
 
-        .achievement-desc {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1rem;
+        .achievement-card p {
+            color: var(--text-secondary);
             line-height: 1.6;
+            font-size: 1rem;
         }
 
-        .scroll-indicator {
+        /* Scroll Progress Enhancement */
+        .scroll-progress {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 4px;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1001;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 9999;
         }
 
-        .scroll-progress {
+        .scroll-progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-green));
+            background: linear-gradient(90deg, var(--primary-blue), var(--electric-cyan), var(--accent-green));
             width: 0%;
-            transition: width 0.1s ease;
-            box-shadow: 0 0 15px rgba(0, 184, 212, 0.5);
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px var(--primary-blue);
         }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        /* Enhanced Footer */
+        footer {
+            background: var(--darker-bg);
+            border-top: 2px solid var(--glass-border);
+            padding: 60px 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 212, 255, 0.02), rgba(108, 92, 231, 0.02));
+            z-index: -1;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid transparent;
+        }
+
+        .footer-links a:hover {
+            color: var(--electric-cyan);
+            border-color: var(--primary-blue);
+            background: rgba(0, 212, 255, 0.1);
+            text-shadow: 0 0 10px var(--primary-blue);
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Code Editor Theme */
+        .code-editor {
+            background: #1e1e2e;
+            border: 2px solid var(--glass-border);
+            border-radius: 15px;
+            margin: 30px 0;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .code-editor-header {
+            background: #2a2a3e;
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .code-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .code-dot.red { background: #ff5f57; }
+        .code-dot.yellow { background: #ffbd2e; }
+        .code-dot.green { background: #28ca42; }
+
+        .code-filename {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .code-content {
+            padding: 25px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        /* Enhanced Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.4rem; }
-            .about-content { grid-template-columns: 1fr; text-align: center; }
-            .profile-image { width: 250px; height: 250px; font-size: 7rem; }
-            section { padding: 80px 20px; }
-            nav { padding: 15px 20px; }
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .hero-buttons { flex-direction: column; align-items: center; }
-            .social-container { grid-template-columns: 1fr; }
-            .achievements-grid { grid-template-columns: 1fr; }
+            nav {
+                padding: 15px 25px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .hero {
+                padding: 100px 20px 40px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.5rem, 8vw, 5rem);
+            }
+
+            .hero-subtitle {
+                font-size: clamp(1.1rem, 4vw, 1.5rem);
+            }
+
+            section {
+                padding: 60px 25px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .profile-section {
+                position: static;
+            }
+
+            .profile-image {
+                width: 250px;
+                height: 250px;
+                font-size: 5rem;
+            }
+
+            .skills-section,
+            .projects-section,
+            .social-section,
+            .achievements-section {
+                padding: 40px 25px;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .social-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-links {
+                gap: 20px;
+            }
         }
 
-        @keyframes rainbow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
 
-        .rainbow-text {
-            animation: rainbow 3s linear infinite;
+        /* Animation delays for staggered effects */
+        .skill-category:nth-child(1) { animation-delay: 0.1s; }
+        .skill-category:nth-child(2) { animation-delay: 0.2s; }
+        .skill-category:nth-child(3) { animation-delay: 0.3s; }
+        .skill-category:nth-child(4) { animation-delay: 0.4s; }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .particles-container {
+        /* Loading Animation */
+        .loading-screen {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            background: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
             pointer-events: none;
         }
 
-        .footer {
-            background: var(--darker-bg);
-            padding: 60px 50px;
-            text-align: center;
-            border-top: 1px solid rgba(0, 184, 212, 0.3);
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(0, 212, 255, 0.3);
+            border-top: 3px solid var(--primary-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
         }
 
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer h3 {
-            color: var(--neon-blue);
-            font-size: 2rem;
-            margin-bottom: 20px;
-            animation: logoGlow 3s ease-in-out infinite alternate;
-        }
-
-        .footer p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .copy-notification {
-            position: fixed;
-            top: 100px;
-            right: 30px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--neon-green);
-            border-radius: 10px;
-            padding: 15px 25px;
-            color: var(--neon-green);
-            font-weight: bold;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            z-index: 1002;
-        }
-
-        .copy-notification.show {
-            transform: translateX(0);
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
-<body>
+<body> 
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Background Animation -->
     <div class="bg-animation"></div>
-    
-    <div class="matrix-rain" id="matrix-rain"></div>
-    
-    <div class="particles-container" id="particles-container"></div>
 
-    <div class="scroll-indicator">
-        <div class="scroll-progress" id="scroll-progress"></div>
-    </div>
+    <!-- Floating Particles -->
+    <div class="floating-particles" id="particles"></div>
 
-    <div class="copy-notification" id="copy-notification">
-        Copied to clipboard! 📋
-    </div>
-
+    <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">ADMIRAL</div>
+            <div class="logo">Admiral</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#social">Social</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#social">Connect</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="rainbow-text">ADMIRAL</h1>
-            <p>Elite gamer, digital strategist, and virtual world conqueror ready to dominate every challenge!</p>
+            <h1>ADMIRAL</h1>
+            <p class="hero-subtitle">Elite Gamer and Hacker<br>Ethically hacking experiences within roblox to check the anti cheat systems</p>
             <div class="hero-buttons">
-                <a href="#achievements" class="hero-btn">Epic Achievements</a>
-                <a href="#social" class="hero-btn">Join My Squad</a>
+                <a href="#projects" class="hero-btn">View Projects</a>
+                <a href="#social" class="hero-btn">Get In Touch</a>
+                <a href="#achievements" class="hero-btn">Achievements</a>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">The Gaming Legend</h2>
+        <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <div class="profile-container">
+            <div class="profile-section">
                 <div class="profile-image">🎮</div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Robux Earned</span>
+                        <span class="stat-value">200k+</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Years Experience</span>
+                        <span class="stat-value">3+</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Languages</span>
+                        <span class="stat-value">7+</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Projects Built</span>
+                        <span class="stat-value">20+</span>
+                    </div>
+                </div>
             </div>
             <div class="about-text">
-                <p>Greetings, fellow gamers! I'm Admiral, a dedicated gaming enthusiast who has conquered digital realms across multiple universes. From the creative landscapes of Roblox to the tactical battlefields of Valorant, I've honed my skills to legendary status.</p>
-                <p>My gaming philosophy centers around strategic excellence, creative innovation, and relentless pursuit of victory. With over 200,000 Robux in my arsenal and countless hours perfecting my craft, I've established myself as a formidable force in the gaming community.</p>
-                <p>Whether I'm building epic structures in Minecraft, executing flawless strategies in tactical shooters, or exploring new worlds in sandbox adventures, I bring passion, skill, and dedication to every gaming session. Join me on this incredible journey through the digital frontier!</p>
+                <p>Welcome to my digital realm! I'm <span class="highlight">Admiral</span>, a passionate and highly skilled gamer who has carved out a significant presence in the Roblox ecosystem and beyond. With over <span class="highlight">200,000 Robux</span> earned through my innovative creations, I've proven my ability to build engaging, profitable gaming experiences.</p>
+                
+                <p>My journey began with <span class="highlight">Luau</span> and <span class="highlight">Lua</span> scripting on Roblox, where I developed complex game mechanics, advanced GUIs, and sophisticated backend systems. From there, I expanded into full-stack development, mastering languages like <span class="highlight">Python</span>, <span class="highlight">JavaScript</span>, <span class="highlight">C++</span>, and <span class="highlight">Node.js</span>.</p>
+
+                <div class="code-editor">
+                    <div class="code-editor-header">
+                        <div class="code-dots">
+                            <div class="code-dot red"></div>
+                            <div class="code-dot yellow"></div>
+                            <div class="code-dot green"></div>
+                        </div>
+                        <div class="code-filename">GameController.luau</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line"><span class="comment">-- Simple game system Disclaimer: This script is a joke!</span></div>
+                        <div class="code-line"><span class="keyword">local</span> <span class="function">GameController</span> = {}</div>
+                        <div class="code-line"><span class="keyword">local</span> Players = game:GetService(<span class="string">"Players"</span>)</div>
+                        <div class="code-line"><span class="keyword">local</span> ReplicatedStorage = game:GetService(<span class="string">"ReplicatedStorage"</span>)</div>
+                        <div class="code-line"></div>
+                        <div class="code-line"><span class="keyword">function</span> <span class="function">GameController</span>:InitializePlayer(player)</div>
+                        <div class="code-line">    <span class="keyword">local</span> playerData = {</div>
+                        <div class="code-line">        coins = <span class="number">1000</span>,</div>
+                        <div class="code-line">        level = <span class="number">1</span>,</div>
+                        <div class="code-line">        achievements = {}</div>
+                        <div class="code-line">    }</div>
+                        <div class="code-line">    <span class="comment">-- Advanced data handling and remote events</span></div>
+                        <div class="code-line"><span class="keyword">end</span></div>
+                    </div>
+                </div>
+
+                <p>I specialize in creating <span class="highlight">scalable web applications</span> using modern frameworks, implementing <span class="highlight">database solutions with BSON</span>, and building responsive user interfaces with <span class="highlight">HTML5</span> and <span class="highlight">CSS3</span>. My expertise extends to server-side development, API design, and cloud deployment strategies.</p>
+
+                <p>What sets me apart is my unique combination of <span class="highlight">gaming industry insight</span> and <span class="highlight">enterprise-level development skills</span>. I understand both the creative aspects of game design and the technical complexities of modern software architecture, allowing me to bridge the gap between imagination and implementation.</p>
+
+                <p>Whether it's developing the next viral Roblox experience, building a complex web application, or architecting scalable backend systems, I bring passion, precision, and proven results to every project. Let's create something extraordinary together!</p>
             </div>
         </div>
     </section>
 
-    <section id="social">
-        <div class="social-section">
-            <h2 class="section-title">Connect & Conquer</h2>
-            <div class="social-container">
-                <div class="social-card" onclick="openLink('https://discordapp.com/users/1212591223387459666/')">
-                    <span class="social-icon">💬</span>
-                    <h3>Discord</h3>
-                    <div class="social-link">@xx_admiral_xx</div>
-                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">Talk to me directly!</small>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-section">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><span class="skill-icon">🎮</span>Game Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Luau</span>
+                        <span class="skill-tag">Lua</span>
+                        <span class="skill-tag">Roblox Studio</span>
+                        <span class="skill-tag">Game Design</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">3D Modeling</span>
+                    </div>
                 </div>
-                <div class="social-card" onclick="openLink('https://www.roblox.com/users/3338826559/profile')">
-                    <span class="social-icon">⏣</span>
-                    <h3>Roblox</h3>
-                    <div class="social-link">@Divyanprb</div>
-                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">We can play together!</small>
+                <div class="skill-category">
+                    <h3><span class="skill-icon">💻</span>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Go</span>
+                    </div>
                 </div>
-                <div class="social-card" onclick="openLink('https://www.snapchat.com/add/xxadmiralproxx')">
-                    <span class="social-icon">👻</span>
-                    <h3>Snapchat</h3>
-                    <div class="social-link">@xxadmiralproxx</div>
-                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">Daily gaming stories!</small>
+                <div class="skill-category">
+                    <h3><span class="skill-icon">🌐</span>Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Vue.js</span>
+                    </div>
                 </div>
-                <div class="social-card" onclick="openLink('https://x.com/admiral17937')">
-                    <span class="social-icon">🐦</span>
-                    <h3>Twitter/X</h3>
-                    <div class="social-link">@admiral17937</div>
-                    <small style="color: rgba(255,255,255,0.5); margin-top: 10px; display: block;">Gaming updates & tips!</small>
+                <div class="skill-category">
+                    <h3><span class="skill-icon">🗄️</span>Backend & Database</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">BSON</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="skill-icon">☁️</span>DevOps & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="skill-icon">🎨</span>Design & Creative</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pixlr></span>
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">UI Design</span>
+                        <span class="skill-tag">Animation</span>
+                        <span class="skill-tag">Prototyping</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-section">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <span class="project-icon">🏆</span>
+                    <h3 class="project-title">Elite Combat Arena</h3>
+                    <p class="project-description">A high-intensity PvP combat game featuring advanced weapon systems, skill trees, and competitive ranking. Generated over 10k Rbx in revenue with 100k+ players.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Luau</span>
+                        <span class="tech-tag">DataStore</span>
+                        <span class="tech-tag">RemoteEvents</span>
+                        <span class="tech-tag">GUI Design</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon">🌟</span>
+                    <h3 class="project-title">Fantasy RPG World</h3>
+                    <p class="project-description">Massive multiplayer RPG with custom quest systems, character progression, and social features. Complex economy simulation with trading systems.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Luau</span>
+                        <span class="tech-tag">ModuleScripts</span>
+                        <span class="tech-tag">OrderedDataStore</span>
+                        <span class="tech-tag">3D Modeling</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon">🚀</span>
+                    <h3 class="project-title">GameDev Portfolio Site</h3>
+                    <p class="project-description">Modern, responsive portfolio website built with cutting-edge web technologies. Features advanced animations and interactive elements.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon">⚡</span>
+                    <h3 class="project-title">Real-time Chat System</h3>
+                    <p class="project-description">Scalable real-time messaging platform with advanced features like file sharing, voice messages, and group management.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">BSON</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon">🎯</span>
+                    <h3 class="project-title">AI-Powered Game Bot</h3>
+                    <p class="project-description">Intelligent game assistance bot using machine learning algorithms. Provides real-time strategy suggestions and performance analytics.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">API Integration</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon">🔧</span>
+                    <h3 class="project-title">Developer Tools Suite</h3>
+                    <p class="project-description">Comprehensive toolkit for Roblox developers including code generators, asset managers, and performance analyzers.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Luau</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
     <section id="achievements">
+        <h2 class="section-title">Achievements</h2>
         <div class="achievements-section">
-            <h2 class="section-title">Hall of Fame</h2>
             <div class="achievements-grid">
                 <div class="achievement-card">
-                    <span class="achievement-icon">💎</span>
-                    <h3 class="achievement-title">Robux Mogul</h3>
-                    <p class="achievement-desc">Amassed an incredible 200,000 Robux fortune through strategic gaming and smart investments in the Roblox economy!</p>
+                    <span class="achievement-icon">💰</span>
+                    <h3>200k+ Robux Earned Total </h3>
+                    <p>Successfully monetized multiple Roblox projects, demonstrating strong business acumen and market understanding in the gaming industry.</p>
                 </div>
                 <div class="achievement-card">
-                    <span class="achievement-icon">🌱</span>
-                    <h3 class="achievement-title">Agricultural Mastermind</h3>
-                    <p class="achievement-desc">Dominates Grow Farms in Roblox with advanced farming strategies, creating the most profitable virtual agricultural empire!</p>
+                    <span class="achievement-icon">👥</span>
+                    <h3>500k+ Players Reached</h3>
+                    <p>Created games that have been enjoyed by over half a million players worldwide, showcasing ability to build engaging user experiences.</p>
                 </div>
                 <div class="achievement-card">
-                    <span class="achievement-icon">🎮</span>
-                    <h3 class="achievement-title">Roblox Virtuoso</h3>
-                    <p class="achievement-desc">Master explorer of countless Roblox worlds, adapting to any game mode and consistently achieving top rankings across diverse experiences!</p>
+                    <span class="achievement-icon">⭐</span>
+                    <h3>Featured Developer</h3>
+                    <p>Recognized by Roblox community for outstanding contributions to the platform and innovative game development approaches.</p>
                 </div>
                 <div class="achievement-card">
-                    <span class="achievement-icon">⛏️</span>
-                    <h3 class="achievement-title">Minecraft Architect</h3>
-                    <p class="achievement-desc">Legendary builder and survivor who crafts magnificent structures while conquering the most challenging Minecraft adventures!</p>
+                    <span class="achievement-icon">🏅</span>
+                    <h3>Multiple Awards</h3>
+                    <p>Recipient of various development competitions and hackathon awards for technical excellence and creative problem-solving.</p>
                 </div>
                 <div class="achievement-card">
                     <span class="achievement-icon">🚀</span>
-                    <h3 class="achievement-title">Impostor Hunter</h3>
-                    <p class="achievement-desc">Among Us strategist with unmatched deduction skills, exposing impostors while executing perfect sabotage missions!</p>
+                    <h3>Open Source Contributor</h3>
+                    <p>Active contributor to various open-source projects, sharing knowledge and tools with the global developer community.</p>
                 </div>
                 <div class="achievement-card">
-                    <span class="achievement-icon">🎯</span>
-                    <h3 class="achievement-title">Tactical Sharpshooter</h3>
-                    <p class="achievement-desc">Valorant competitor with precision aim and strategic mind, consistently clutching rounds and leading teams to victory!</p>
-                </div>
-                <div class="achievement-card">
-                    <span class="achievement-icon">🔫</span>
-                    <h3 class="achievement-title">Battlefield Commander</h3>
-                    <p class="achievement-desc">Call of Duty veteran with exceptional K/D ratio, mastering every weapon and dominating multiplayer battlefields!</p>
-                </div>
-                <div class="achievement-card">
-                    <span class="achievement-icon">⚓</span>
-                    <h3 class="achievement-title">Fleet Admiral</h3>
-                    <p class="achievement-desc">Modern Warships naval strategist, commanding powerful fleets and securing decisive victories in epic sea battles!</p>
+                    <span class="achievement-icon">📚</span>
+                    <h3>Tech Mentor</h3>
+                    <p>Guided and mentored aspiring developers, helping them navigate their journey into game development and programming.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Social Section -->
+    <section id="social">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="social-section">
+            <div class="social-grid">
+                <div class="social-card" onclick="window.open('https://www.roblox.com/')">
+                    <span class="social-icon">🎮</span>
+                    <h3>Roblox Profile | Link has not been set due to security reasons</h3>
+                    <p>Check out my games and creations</p>
+                </div>
+                <div class="social-card" onclick="window.open('https://x.com/admiral17937')">
+                    <span class="social-icon">X</span>
+                    <h3>X</h3>
+                    <p>Latest updates and insights</p>
+                </div>
+                <div class="social-card" onclick="copyToClipboard('Admiralplay252@gmail.com')">
+                     <span class="social-icon">📧</span>
+                     <h3>Email</h3>
+                    <p>Get in touch directly</p>
+                </div>
+                </div>
+                <div class="social-card" onclick="window.open('https://discordapp.com/users/1212591223387459666')">
+                    <span class="social-icon">💬</span>
+                    <h3>Discord</h3>
+                    <p>Contact to me through Discord</p>
+                </div>
+                <div class="social-card" onclick="window.open('https://snapchat.com/add/xxadmiralproxx')">
+                    <span class="social-icon">👻</span>
+                    <h3>Snapchat</h3>
+                    <p>Contact to me through Snapchat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
         <div class="footer-content">
-            <h3>ADMIRAL</h3>
-            <p>Elite Gaming • Strategic Excellence • Digital Domination</p>
-            <p>Ready to conquer new worlds and achieve legendary status!</p>
-            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.6;">
-                © 2024 Admiral Gaming. Level up your game experience.
-            </p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#social">Connect</a>
+            </div>
+            <p class="footer-text">© 2025 Admiral. Elite Gamer • Game Developer • Innovator</p>
+            <p class="footer-text">Built with passion using cutting-edge web technologies</p>
         </div>
     </footer>
 
     <script>
-        // Matrix Rain Effect
-        function createMatrixRain() {
-            const matrixContainer = document.getElementById('matrix-rain');
-            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-            
-            for (let i = 0; i < 20; i++) {
-                setTimeout(() => {
-                    const column = document.createElement('div');
-                    column.className = 'matrix-column';
-                    column.style.left = Math.random() * 100 + '%';
-                    column.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                    
-                    let text = '';
-                    for (let j = 0; j < 20; j++) {
-                        text += chars.charAt(Math.floor(Math.random() * chars.length)) + '<br>';
-                    }
-                    column.innerHTML = text;
-                    
-                    matrixContainer.appendChild(column);
-                    
-                    setTimeout(() => {
-                        if (matrixContainer.contains(column)) {
-                            matrixContainer.removeChild(column);
-                        }
-                    }, 5000);
-                }, i * 200);
+        // Floating shapes animation
+function createFloatingShapes() {
+    const container = document.getElementById('floating-shapes');
+    
+    function createShape() {
+        const shape = document.createElement('div');
+        shape.className = 'shape';
+        
+        // Random size between 20px and 80px
+        const size = Math.random() * 60 + 20;
+        shape.style.width = size + 'px';
+        shape.style.height = size + 'px';
+        
+        // Random horizontal position
+        shape.style.left = Math.random() * 100 + '%';
+        
+        // Random animation duration between 20-30s
+        const duration = Math.random() * 10 + 20;
+        shape.style.animationDuration = duration + 's';
+        
+        // Random delay before starting
+        const delay = Math.random() * 5;
+        shape.style.animationDelay = delay + 's';
+        
+        container.appendChild(shape);
+        
+        // Remove shape after animation completes
+        setTimeout(() => {
+            if (container.contains(shape)) {
+                container.removeChild(shape);
             }
-        }
+        }, (duration + delay) * 1000);
+    }
+    
+    // Create initial shapes
+    for (let i = 0; i < 5; i++) {
+        setTimeout(() => createShape(), i * 2000);
+    }
+    
+    // Continue creating shapes every 4 seconds
+    setInterval(createShape, 4000);
+}
 
-        // Floating Particles Effect
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles-container');
+// Scroll progress bar
+function updateScrollProgress() {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollProgress = (scrollTop / scrollHeight) * 100;
+    
+    const scrollBar = document.getElementById('scroll-bar');
+    if (scrollBar) {
+        scrollBar.style.width = scrollProgress + '%';
+    }
+}
+
+// Smooth scroll for navigation links
+function initSmoothScroll() {
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
             
-            for (let i = 0; i < 15; i++) {
-                setTimeout(() => {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                    particle.style.animationDelay = Math.random() * 5 + 's';
-                    
-                    // Random colors
-                    const colors = ['var(--neon-blue)', 'var(--neon-purple)', 'var(--neon-green)', 'var(--neon-pink)'];
-                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                    particle.style.background = randomColor;
-                    particle.style.boxShadow = `0 0 6px ${randomColor}`;
-                    
-                    particlesContainer.appendChild(particle);
-                    
-                    setTimeout(() => {
-                        if (particlesContainer.contains(particle)) {
-                            particlesContainer.removeChild(particle);
-                        }
-                    }, 15000);
-                }, i * 1000);
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80; // Account for fixed nav
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
             }
-        }
+        });
+    });
+}
 
-        // Scroll Progress Indicator
-        function updateScrollProgress() {
-            const scrollProgress = document.getElementById('scroll-progress');
-            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+// Copy to clipboard function for social cards
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Show a temporary notification
+        const notification = document.createElement('div');
+        notification.textContent = 'Copied to clipboard!';
+        notification.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 212, 255, 0.9);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            z-index: 9999;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            animation: fadeInOut 2s ease-in-out forwards;
+        `;
+        
+        // Add animation keyframes if not already added
+        if (!document.querySelector('#copyNotificationStyle')) {
+            const style = document.createElement('style');
+            style.id = 'copyNotificationStyle';
+            style.textContent = `
+                @keyframes fadeInOut {
+                    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+                    20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                    80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}
+
+// Enhanced navbar effects
+function initNavbarEffects() {
+    const nav = document.querySelector('nav');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.style.background = 'rgba(15, 15, 35, 0.98)';
+            nav.style.boxShadow = '0 2px 20px rgba(0, 212, 255, 0.1)';
+        } else {
+            nav.style.background = 'rgba(15, 15, 35, 0.95)';
+            nav.style.boxShadow = 'none';
+        }
+        
+        updateScrollProgress();
+    });
+}
+
+// Intersection Observer for fade-in animations
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements that should animate on scroll
+    document.querySelectorAll('.skill-category, .social-card, .achievement-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// Initialize all functions when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    createFloatingShapes();
+    initSmoothScroll();
+    initNavbarEffects();
+    initScrollAnimations();
+    
+    // Add some interactive hover effects
+    document.querySelectorAll('.skill-category, .social-card, .achievement-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+
+// Window resize handler for responsive adjustments
+window.addEventListener('resize', () => {
+    // Recalculate any size-dependent animations if needed
+    updateScrollProgress();
+});
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 1000);
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (scrollTop / scrollHeight) * 100;
-            scrollProgress.style.width = scrollPercent + '%';
+            const scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollProgress + '%';
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        // Floating Particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 4 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particlesContainer.appendChild(particle);
+            }
         }
+
+        // Initialize particles
+        createParticles();
 
         // Smooth scrolling for navigation links
-        function setupSmoothScrolling() {
-            const navLinks = document.querySelectorAll('.nav-links a, .hero-btn');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (this.getAttribute('href').startsWith('#')) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetSection = document.querySelector(targetId);
-                        if (targetSection) {
-                            targetSection.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }
-                });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.skill-category, .project-card, .achievement-card, .social-card');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.animation = 'slideUp 0.8s ease-out forwards';
+                }
             });
         }
 
-        // Copy to clipboard function
-        function copyToClipboard(text, type) {
-            navigator.clipboard.writeText(text).then(() => {
-                showNotification(`${type} copied to clipboard!`);
-            }).catch(() => {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = text;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                showNotification(`${type} copied to clipboard!`);
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            animateOnScroll();
+        });
+
+        // Add interactive hover effects
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.1)';
             });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Dynamic typing effect for code
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
         }
 
-        // Open link function
-        function openLink(url) {
-            window.open(url, '_blank', 'noopener,noreferrer');
-        }
+        // Parallax effect for background
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElement = document.querySelector('.bg-animation');
+            const speed = scrolled * 0.5;
+            parallaxElement.style.transform = `translateY(${speed}px)`;
+        });
 
-        // Show notification
-        function showNotification(message) {
-            const notification = document.getElementById('copy-notification');
-            notification.textContent = message;
-            notification.classList.add('show');
+        // Add glitch effect to title occasionally
+        setInterval(() => {
+            const title = document.querySelector('.hero h1');
+            title.style.textShadow = `
+                ${Math.random() * 5}px ${Math.random() * 5}px 0 #00d4ff,
+                ${Math.random() * 5}px ${Math.random() * 5}px 0 #6c5ce7
+            `;
             
             setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-        }
-
-        // Navbar scroll effect
-        function setupNavbarScroll() {
-            const navbar = document.getElementById('navbar');
-            let lastScrollTop = 0;
-            
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    // Scrolling down
-                    navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up
-                    navbar.style.transform = 'translateY(0)';
-                }
-                
-                lastScrollTop = scrollTop;
-                updateScrollProgress();
-            });
-        }
-
-        // Intersection Observer for animations
-        function setupAnimationObserver() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe sections for scroll animations
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(section);
-            });
-        }
-
-        // Mobile menu toggle (placeholder for future enhancement)
-        function setupMobileMenu() {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-            
-            mobileMenuBtn.addEventListener('click', () => {
-                // Future enhancement: toggle mobile menu
-                console.log('Mobile menu clicked - feature coming soon!');
-            });
-        }
-
-        // Add keyboard navigation
-        function setupKeyboardNavigation() {
-            document.addEventListener('keydown', (e) => {
-                // Arrow key navigation between sections
-                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-                    const sections = ['home', 'about', 'social', 'achievements'];
-                    const currentHash = window.location.hash.replace('#', '') || 'home';
-                    const currentIndex = sections.indexOf(currentHash);
-                    
-                    let nextIndex;
-                    if (e.key === 'ArrowDown') {
-                        nextIndex = (currentIndex + 1) % sections.length;
-                    } else {
-                        nextIndex = (currentIndex - 1 + sections.length) % sections.length;
-                    }
-                    
-                    const nextSection = document.getElementById(sections[nextIndex]);
-                    if (nextSection) {
-                        nextSection.scrollIntoView({ behavior: 'smooth' });
-                        history.pushState(null, null, `#${sections[nextIndex]}`);
-                    }
-                }
-            });
-        }
-
-        // Initialize all effects
-        function initializeEffects() {
-            createMatrixRain();
-            createParticles();
-            setupSmoothScrolling();
-            setupNavbarScroll();
-            setupAnimationObserver();
-            setupMobileMenu();
-            setupKeyboardNavigation();
-            
-            // Refresh effects periodically
-            setInterval(createMatrixRain, 8000);
-            setInterval(createParticles, 12000);
-        }
-
-        // Start everything when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initializeEffects);
-
-        // Handle page visibility changes
-        document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'visible') {
-                // Restart animations when page becomes visible
-                setTimeout(initializeEffects, 500);
-            }
-        });
-
-        // Performance optimization: pause animations when not visible
-        let animationsPaused = false;
+                title.style.textShadow = '0 0 30px var(--primary-blue)';
+            }, 100);
+        }, 5000);
+        // Particle/Floating Shapes Background Animation
+function createFloatingShapes() {
+    const container = document.getElementById('floating-shapes');
+    
+    function createShape() {
+        const shape = document.createElement('div');
+        shape.className = 'shape';
         
-        function pauseAnimations() {
-            if (!animationsPaused) {
-                document.body.style.animationPlayState = 'paused';
-                animationsPaused = true;
-            }
-        }
+        // Random size between 20px and 80px
+        const size = Math.random() * 60 + 20;
+        shape.style.width = size + 'px';
+        shape.style.height = size + 'px';
         
-        function resumeAnimations() {
-            if (animationsPaused) {
-                document.body.style.animationPlayState = 'running';
-                animationsPaused = false;
-            }
-        }
+        // Random horizontal position
+        shape.style.left = Math.random() * 100 + '%';
         
-        // Pause animations when tab is not active
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                pauseAnimations();
-            } else {
-                resumeAnimations();
+        // Random animation duration between 20-30s
+        const duration = Math.random() * 10 + 20;
+        shape.style.animationDuration = duration + 's';
+        
+        // Random delay before starting
+        const delay = Math.random() * 5;
+        shape.style.animationDelay = delay + 's';
+        
+        container.appendChild(shape);
+        
+        // Remove shape after animation completes
+        setTimeout(() => {
+            if (container.contains(shape)) {
+                container.removeChild(shape);
             }
-        });
+        }, (duration + delay) * 1000);
+    }
+    
+    // Create initial shapes
+    for (let i = 0; i < 8; i++) {
+        setTimeout(() => createShape(), i * 1500);
+    }
+    
+    // Continue creating shapes every 3 seconds
+    setInterval(createShape, 3000);
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    createFloatingShapes();
+});
     </script>
 </body>
 </html>
