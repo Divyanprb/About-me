@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admiral | Elite Gamer and a Roblox Developer</title>
-    
+
     <meta property="og:title" content="ADMIRAL - Elite Gamer and a Roblox Developer 🎮💰">
     <meta property="og:description" content="Roblox developer with 200k+ Robux. Expert in Luau, Python, JavaScript, C++, and modern web technologies. Building the future of gaming.">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/0f0f23/00d4ff?text=Admiral+%F0%9F%8E%AE%F0%9F%92%BB">
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -54,7 +54,7 @@
             width: 100%;
             height: 100%;
             z-index: -3;
-            background: 
+            background:
                 radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 40%),
                 radial-gradient(circle at 80% 70%, rgba(108, 92, 231, 0.06) 0%, transparent 40%),
                 radial-gradient(circle at 40% 80%, rgba(0, 184, 148, 0.04) 0%, transparent 40%),
@@ -133,6 +133,49 @@
             align-items: center;
             max-width: 1400px;
             margin: 0 auto;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .mobile-nav-links {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.98);
+            backdrop-filter: blur(25px);
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            z-index: 999;
+        }
+
+        .mobile-nav-links.active {
+            display: flex;
+        }
+
+        .mobile-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 15px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary-blue);
         }
 
         .logo {
@@ -225,7 +268,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-size: clamp(2.5rem, 10vw, 6rem);
             margin-bottom: 30px;
             background: linear-gradient(45deg, var(--primary-blue), var(--electric-cyan), var(--secondary-purple), var(--neon-green));
             background-size: 400% 400%;
@@ -248,7 +291,7 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            font-size: clamp(1.1rem, 4vw, 1.6rem);
             margin-bottom: 40px;
             color: var(--text-secondary);
             animation: slideUp 1.2s ease-out 0.3s both;
@@ -310,7 +353,7 @@
         }
 
         .section-title {
-            font-size: clamp(2.8rem, 6vw, 4rem);
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
             text-align: center;
             margin-bottom: 80px;
             background: linear-gradient(45deg, var(--accent-green), var(--soft-pink), var(--primary-blue));
@@ -969,19 +1012,27 @@
             }
 
             .nav-links {
-                gap: 20px;
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.close .line:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.close .line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.close .line:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
             }
 
             .hero {
                 padding: 100px 20px 40px;
-            }
-
-            .hero h1 {
-                font-size: clamp(2.5rem, 8vw, 5rem);
-            }
-
-            .hero-subtitle {
-                font-size: clamp(1.1rem, 4vw, 1.5rem);
             }
 
             section {
@@ -995,6 +1046,7 @@
 
             .profile-section {
                 position: static;
+                align-items: center;
             }
 
             .profile-image {
@@ -1023,14 +1075,48 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.close .line:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.close .line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.close .line:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .profile-section {
+                position: static;
+                align-items: center;
+            }
+
+            .profile-image {
+                width: 250px;
+                height: 250px;
+                font-size: 5rem;
+            }
+        }
+
         @media (max-width: 480px) {
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
-            }
-
-            .nav-links {
-                display: none;
             }
         }
 
@@ -1090,7 +1176,7 @@
         }
     </style>
 </head>
-<body> 
+<body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-spinner"></div>
@@ -1119,8 +1205,21 @@
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#social">Connect</a></li>
             </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </nav>
+    <div class="mobile-nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#social">Connect</a>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -1162,7 +1261,7 @@
             </div>
             <div class="about-text">
                 <p>Welcome to my digital realm! I'm <span class="highlight">Admiral</span>, a passionate and highly skilled gamer who has carved out a significant presence in the Roblox ecosystem and beyond. With over <span class="highlight">200,000 Robux</span> earned through my innovative creations, I've proven my ability to build engaging, profitable gaming experiences.</p>
-                
+
                 <p>My journey began with <span class="highlight">Luau</span> and <span class="highlight">Lua</span> scripting on Roblox, where I developed complex game mechanics, advanced GUIs, and sophisticated backend systems. From there, I expanded into full-stack development, mastering languages like <span class="highlight">Python</span>, <span class="highlight">JavaScript</span>, <span class="highlight">C++</span>, and <span class="highlight">Node.js</span>.</p>
 
                 <div class="code-editor">
@@ -1394,28 +1493,27 @@
         <h2 class="section-title">Let's Connect</h2>
         <div class="social-section">
             <div class="social-grid">
-                <div class="social-card" onclick="window.open('https://www.roblox.com/')">
+                <div class="social-card" data-link="https://www.roblox.com/">
                     <span class="social-icon">🎮</span>
                     <h3>Roblox Profile | Link has not been set due to security reasons</h3>
                     <p>Check out my games and creations</p>
                 </div>
-                <div class="social-card" onclick="window.open('https://x.com/admiral17937')">
+                <div class="social-card" data-link="https://x.com/admiral17937">
                     <span class="social-icon">X</span>
                     <h3>X</h3>
                     <p>Latest updates and insights</p>
                 </div>
-                <div class="social-card" onclick="copyToClipboard('Admiralplay252@gmail.com')">
+                <div class="social-card" data-copy="Admiralplay252@gmail.com">
                      <span class="social-icon">📧</span>
                      <h3>Email</h3>
                     <p>Get in touch directly</p>
                 </div>
-                </div>
-                <div class="social-card" onclick="window.open('https://discordapp.com/users/1212591223387459666')">
+                <div class="social-card" data-link="https://discordapp.com/users/1212591223387459666">
                     <span class="social-icon">💬</span>
                     <h3>Discord</h3>
                     <p>Contact to me through Discord</p>
                 </div>
-                <div class="social-card" onclick="window.open('https://snapchat.com/add/xxadmiralproxx')">
+                <div class="social-card" data-link="https://snapchat.com/add/xxadmiralproxx">
                     <span class="social-icon">👻</span>
                     <h3>Snapchat</h3>
                     <p>Contact to me through Snapchat</p>
@@ -1441,369 +1539,167 @@
     </footer>
 
     <script>
-        // Floating shapes animation
-function createFloatingShapes() {
-    const container = document.getElementById('floating-shapes');
-    
-    function createShape() {
-        const shape = document.createElement('div');
-        shape.className = 'shape';
-        
-        // Random size between 20px and 80px
-        const size = Math.random() * 60 + 20;
-        shape.style.width = size + 'px';
-        shape.style.height = size + 'px';
-        
-        // Random horizontal position
-        shape.style.left = Math.random() * 100 + '%';
-        
-        // Random animation duration between 20-30s
-        const duration = Math.random() * 10 + 20;
-        shape.style.animationDuration = duration + 's';
-        
-        // Random delay before starting
-        const delay = Math.random() * 5;
-        shape.style.animationDelay = delay + 's';
-        
-        container.appendChild(shape);
-        
-        // Remove shape after animation completes
-        setTimeout(() => {
-            if (container.contains(shape)) {
-                container.removeChild(shape);
+        document.addEventListener('DOMContentLoaded', function() {
+            // Loading Screen
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                }, 1000);
             }
-        }, (duration + delay) * 1000);
-    }
-    
-    // Create initial shapes
-    for (let i = 0; i < 5; i++) {
-        setTimeout(() => createShape(), i * 2000);
-    }
-    
-    // Continue creating shapes every 4 seconds
-    setInterval(createShape, 4000);
-}
 
-// Scroll progress bar
-function updateScrollProgress() {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollProgress = (scrollTop / scrollHeight) * 100;
-    
-    const scrollBar = document.getElementById('scroll-bar');
-    if (scrollBar) {
-        scrollBar.style.width = scrollProgress + '%';
-    }
-}
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 100) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
 
-// Smooth scroll for navigation links
-function initSmoothScroll() {
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 80; // Account for fixed nav
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
+            // Scroll Progress Bar
+            const scrollProgress = document.getElementById('scrollProgress');
+            if (scrollProgress) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = document.documentElement.scrollTop;
+                    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    scrollProgress.style.width = progress + '%';
+                });
+            }
+
+            // Floating Particles
+            function createParticles() {
+                const particlesContainer = document.getElementById('particles');
+                if (!particlesContainer) return;
+                const particleCount = 50;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.width = Math.random() * 4 + 2 + 'px';
+                    particle.style.height = particle.style.width;
+                    particle.style.animationDelay = Math.random() * 20 + 's';
+                    particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                    particlesContainer.appendChild(particle);
+                }
+            }
+            createParticles();
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Animate elements on scroll
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.skill-category, .project-card, .achievement-card, .social-card');
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.style.animation = 'slideUp 0.8s ease-out forwards';
+                    }
+                });
+            }
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Initial check
+
+            // Hamburger menu
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.querySelector('.mobile-nav-links');
+
+            if (hamburger && mobileNav) {
+                hamburger.addEventListener('click', () => {
+                    mobileNav.classList.toggle('active');
+                    hamburger.classList.toggle('close');
+                });
+            }
+
+            // Interactive hover effects for skill tags
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.1)';
+                });
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Social card click handlers
+            document.querySelectorAll('.social-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const link = this.dataset.link;
+                    const copy = this.dataset.copy;
+
+                    if (link) {
+                        window.open(link, '_blank');
+                    } else if (copy) {
+                        copyToClipboard(copy);
+                    }
+                });
+            });
+
+            // Copy to clipboard function
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const notification = document.createElement('div');
+                    notification.textContent = 'Copied to clipboard!';
+                    notification.style.cssText = `
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: rgba(0, 212, 255, 0.9);
+                        color: white;
+                        padding: 15px 30px;
+                        border-radius: 25px;
+                        z-index: 9999;
+                        font-weight: 600;
+                        backdrop-filter: blur(10px);
+                        animation: fadeInOut 2s ease-in-out forwards;
+                    `;
+
+                    if (!document.querySelector('#copyNotificationStyle')) {
+                        const style = document.createElement('style');
+                        style.id = 'copyNotificationStyle';
+                        style.textContent = `
+                            @keyframes fadeInOut {
+                                0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+                                20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                                80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                                100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+                            }
+                        `;
+                        document.head.appendChild(style);
+                    }
+
+                    document.body.appendChild(notification);
+                    setTimeout(() => {
+                        if (document.body.contains(notification)) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                    alert('Failed to copy');
                 });
             }
         });
-    });
-}
-
-// Copy to clipboard function for social cards
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        // Show a temporary notification
-        const notification = document.createElement('div');
-        notification.textContent = 'Copied to clipboard!';
-        notification.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 212, 255, 0.9);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 25px;
-            z-index: 9999;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-            animation: fadeInOut 2s ease-in-out forwards;
-        `;
-        
-        // Add animation keyframes if not already added
-        if (!document.querySelector('#copyNotificationStyle')) {
-            const style = document.createElement('style');
-            style.id = 'copyNotificationStyle';
-            style.textContent = `
-                @keyframes fadeInOut {
-                    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-                    20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-                    80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-                    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-        
-        document.body.appendChild(notification);
-        
-        setTimeout(() => {
-            if (document.body.contains(notification)) {
-                document.body.removeChild(notification);
-            }
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy text: ', err);
-    });
-}
-
-// Enhanced navbar effects
-function initNavbarEffects() {
-    const nav = document.querySelector('nav');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(15, 15, 35, 0.98)';
-            nav.style.boxShadow = '0 2px 20px rgba(0, 212, 255, 0.1)';
-        } else {
-            nav.style.background = 'rgba(15, 15, 35, 0.95)';
-            nav.style.boxShadow = 'none';
-        }
-        
-        updateScrollProgress();
-    });
-}
-
-// Intersection Observer for fade-in animations
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements that should animate on scroll
-    document.querySelectorAll('.skill-category, .social-card, .achievement-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-}
-
-// Initialize all functions when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    createFloatingShapes();
-    initSmoothScroll();
-    initNavbarEffects();
-    initScrollAnimations();
-    
-    // Add some interactive hover effects
-    document.querySelectorAll('.skill-category, .social-card, .achievement-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-});
-
-// Window resize handler for responsive adjustments
-window.addEventListener('resize', () => {
-    // Recalculate any size-dependent animations if needed
-    updateScrollProgress();
-});
-        // Loading Screen
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                document.getElementById('loadingScreen').classList.add('hidden');
-            }, 1000);
-        });
-
-        // Scroll Progress Bar
-        window.addEventListener('scroll', function() {
-            const scrollTop = document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollProgress = (scrollTop / scrollHeight) * 100;
-            document.getElementById('scrollProgress').style.width = scrollProgress + '%';
-        });
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        // Floating Particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.width = Math.random() * 4 + 2 + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Initialize particles
-        createParticles();
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animate elements on scroll
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.skill-category, .project-card, .achievement-card, .social-card');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.style.animation = 'slideUp 0.8s ease-out forwards';
-                }
-            });
-        }
-
-        window.addEventListener('scroll', animateOnScroll);
-
-        // Initialize animations
-        document.addEventListener('DOMContentLoaded', function() {
-            animateOnScroll();
-        });
-
-        // Add interactive hover effects
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px) scale(1.1)';
-            });
-            
-            tag.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Dynamic typing effect for code
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            
-            type();
-        }
-
-        // Parallax effect for background
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallaxElement = document.querySelector('.bg-animation');
-            const speed = scrolled * 0.5;
-            parallaxElement.style.transform = `translateY(${speed}px)`;
-        });
-
-        // Add glitch effect to title occasionally
-        setInterval(() => {
-            const title = document.querySelector('.hero h1');
-            title.style.textShadow = `
-                ${Math.random() * 5}px ${Math.random() * 5}px 0 #00d4ff,
-                ${Math.random() * 5}px ${Math.random() * 5}px 0 #6c5ce7
-            `;
-            
-            setTimeout(() => {
-                title.style.textShadow = '0 0 30px var(--primary-blue)';
-            }, 100);
-        }, 5000);
-        // Particle/Floating Shapes Background Animation
-function createFloatingShapes() {
-    const container = document.getElementById('floating-shapes');
-    
-    function createShape() {
-        const shape = document.createElement('div');
-        shape.className = 'shape';
-        
-        // Random size between 20px and 80px
-        const size = Math.random() * 60 + 20;
-        shape.style.width = size + 'px';
-        shape.style.height = size + 'px';
-        
-        // Random horizontal position
-        shape.style.left = Math.random() * 100 + '%';
-        
-        // Random animation duration between 20-30s
-        const duration = Math.random() * 10 + 20;
-        shape.style.animationDuration = duration + 's';
-        
-        // Random delay before starting
-        const delay = Math.random() * 5;
-        shape.style.animationDelay = delay + 's';
-        
-        container.appendChild(shape);
-        
-        // Remove shape after animation completes
-        setTimeout(() => {
-            if (container.contains(shape)) {
-                container.removeChild(shape);
-            }
-        }, (duration + delay) * 1000);
-    }
-    
-    // Create initial shapes
-    for (let i = 0; i < 8; i++) {
-        setTimeout(() => createShape(), i * 1500);
-    }
-    
-    // Continue creating shapes every 3 seconds
-    setInterval(createShape, 3000);
-}
-
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    createFloatingShapes();
-});
     </script>
 </body>
 </html>
